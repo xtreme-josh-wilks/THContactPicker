@@ -38,4 +38,7 @@
 - (void)setPromptLabelText:(NSString *)text;
 - (void)setFont:(UIFont *)font;
 
+- (void)setPromptLabelFont:(UIFont *)font;
+- (void)setPromptLabelFontColor:(UIColor *)color;
+
 @end

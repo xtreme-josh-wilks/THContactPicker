@@ -41,4 +41,7 @@
 - (void)unSelect;
 - (void)setFont:(UIFont *)font;
 
++ (THBubbleStyle *)defaultBubbleStyle;
++ (THBubbleStyle *)defaultSelectedBubbleStyle;
+
 @end

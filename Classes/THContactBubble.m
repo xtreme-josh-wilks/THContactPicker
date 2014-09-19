@@ -62,20 +62,10 @@
         
         // default styles
         if (style == nil) {
-            style = [[THBubbleStyle alloc] initWithTextColor:k7ColorText
-                                                 gradientTop:k7ColorGradientTop
-                                              gradientBottom:k7ColorGradientBottom
-                                                 borderColor:k7ColorBorder
-                                                 borderWidth:k7DefaultBorderWidth
-                                          cornerRadiusFactor:k7DefaultCornerRadiusFactor];
+            style = [THContactBubble defaultBubbleStyle];
         }
         if (selectedStyle == nil) {
-            selectedStyle = [[THBubbleStyle alloc] initWithTextColor:k7ColorSelectedText
-                                                         gradientTop:k7ColorSelectedGradientTop
-                                                      gradientBottom:k7ColorSelectedGradientBottom
-                                                         borderColor:k7ColorSelectedBorder
-                                                        borderWidth:k7DefaultBorderWidth
-                                                  cornerRadiusFactor:k7DefaultCornerRadiusFactor];
+            selectedStyle = [THContactBubble defaultSelectedBubbleStyle];
         }
         
         self.style = style;
@@ -225,6 +215,26 @@
 
 - (UIKeyboardAppearance)keyboardAppearance {
     return self.textView.keyboardAppearance;
+}
+
+#pragma mark - Default style 
+
++ (THBubbleStyle *)defaultBubbleStyle {
+    return [[THBubbleStyle alloc] initWithTextColor:k7ColorText
+                                        gradientTop:k7ColorGradientTop
+                                     gradientBottom:k7ColorGradientBottom
+                                        borderColor:k7ColorBorder
+                                        borderWidth:k7DefaultBorderWidth
+                                 cornerRadiusFactor:k7DefaultCornerRadiusFactor];
+}
+
++ (THBubbleStyle *)defaultSelectedBubbleStyle {
+    return [[THBubbleStyle alloc] initWithTextColor:k7ColorSelectedText
+                                        gradientTop:k7ColorSelectedGradientTop
+                                     gradientBottom:k7ColorSelectedGradientBottom
+                                        borderColor:k7ColorSelectedBorder
+                                        borderWidth:k7DefaultBorderWidth
+                                 cornerRadiusFactor:k7DefaultCornerRadiusFactor];
 }
 
 @end
